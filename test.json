@@ -1,0 +1,122 @@
+[
+    {
+        "question": "Who holds the position of the head of the Educational Office within the International Confederation of Wizards?",
+        "SPARQL": "SELECT ?leader WHERE { hp:Educational_office hp:leader ?leader .}"
+    },
+    {
+        "question": "What is Queenie Goldstein's lineage in terms of blood status?",
+        "SPARQL": "SELECT ?bloodStatus WHERE { hp:Queenie_goldstein hp:blood ?bloodStatus.}"
+    },
+    {
+        "question": "What is the name of the educational institution that houses the Astronomy Tower?",
+        "SPARQL": "SELECT ?schoolName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?schoolName . FILTER(CONTAINS(str(?location), 'Hogwarts'))}"
+    },
+    {
+        "question": "Where can the office of the Minister for Magic be found?",
+        "SPARQL": "SELECT ?location WHERE { hp:Minister_for_magics_office hp:location ?location .}"
+    },
+    {
+        "question": "What is the title and organization that the educational office belongs to within the wizarding community?",
+        "SPARQL": "SELECT ?name ?affiliation WHERE { hp:Educational_office hp:name ?name . hp:Educational_office hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What organization does the Department of Magical Accidents and Catastrophes belong to?",
+        "SPARQL": "SELECT ?affiliation WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the lineage and type of creature of Queenie Goldstein?",
+        "SPARQL": "SELECT ?blood_status ?species WHERE { hp:Queenie_goldstein hp:blood ?blood_status . hp:Queenie_goldstein hp:species ?species .}"
+    },
+    {
+        "question": "Where can the Astronomy Tower be found?",
+        "SPARQL": "SELECT ?locationName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "Who lives in Mould-on-the-Wold?",
+        "SPARQL": "SELECT ?residents WHERE { hp:Mould_on_the_wold hp:residents ?residents .}"
+    },
+    {
+        "question": "Which characters in the Harry Potter universe have a mixed blood heritage known as Half-Bloods?",
+        "SPARQL": "SELECT ?character_name WHERE { ?character a hp:Individual_; hp:name ?character_name ; hp:blood hp:Half_blood .}"
+    },
+    {
+        "question": "Who held the position of Minister for Magic prior to Cornelius Fudge?",
+        "SPARQL": "SELECT ?minister WHERE { ?minister hp:title hp:Minister_for_magic ; hp:job hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic ; hp:species hp:Human . FILTER (?minister != hp:Cornelius_fudge)}"
+    },
+    {
+        "question": "What is the name of the group associated with Wizardkind that is led by the International Confederation of Wizards?",
+        "SPARQL": "SELECT ?organizationName WHERE { hp:Educational_office hp:name ?organizationName ; hp:leader hp:International_confederation_of_wizards ; hp:affiliation hp:Wizardkind .}"
+    },
+    {
+        "question": "Who were the adversaries of the International Confederation of Wizards?",
+        "SPARQL": "SELECT ?enemyName  WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?enemyName .}"
+    },
+    {
+        "question": "Which people's worst fear was embodied by Tom Riddle in the form of a boggart?",
+        "SPARQL": "SELECT ?individualName WHERE { ?individual hp:boggart hp:Tom_riddle . ?individual hp:name ?individualName .}"
+    },
+    {
+        "question": "What genders do people who belong to the British Ministry of Magic identify as?",
+        "SPARQL": "SELECT DISTINCT ?gender WHERE { ?individual hp:loyalty hp:British_ministry_of_magic . ?individual hp:gender ?gender . }"
+    },
+    {
+        "question": "What was the name given to the wand that was in the possession of Albus Dumbledore?",
+        "SPARQL": "SELECT ?wandName WHERE { hp:Albus_dumbledores_wand hp:name ?wandName .}"
+    },
+    {
+        "question": "What is the name of the location in Great Britain where Mould on the Wold is situated?",
+        "SPARQL": "SELECT ?placeName WHERE { hp:Mould_on_the_wold hp:location ?location . ?location hp:name ?placeName . FILTER(CONTAINS(str(?location), 'Great_britain'))}"
+    },
+    {
+        "question": "What is the name of the council affiliated with the British Ministry of Magic?",
+        "SPARQL": "SELECT ?councilName WHERE { hp:Council_of_magical_law hp:affiliation hp:British_ministry_of_magic .hp:Council_of_magical_law hp:name ?councilName .}"
+    },
+    {
+        "question": "In which school is the Astronomy tower situated?",
+        "SPARQL": "SELECT ?schoolName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?schoolName . FILTER(CONTAINS(str(?location), 'Hogwarts'))}"
+    },
+    {
+        "question": "Which newspaper did Albus Dumbledore subscribe to?",
+        "SPARQL": "SELECT ?name WHERE { hp:Transfiguration_today hp:name ?name ; hp:subscribers hp:Albus_dumbledore .}"
+    },
+    {
+        "question": "Who currently holds the position of head boy or girl among the Prefects?",
+        "SPARQL": "SELECT ?leader WHERE { hp:Prefect hp:leader hp:Head_boy_or_girl ; hp:name ?leader .}"
+    },
+    {
+        "question": "What is the name of the Scottish location affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPARQL": "SELECT ?name WHERE { hp:Hogwarts_castle hp:location hp:Scotland ; hp:name ?name ; hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What is the name of the headquarters where Dumbledore's Army is based?",
+        "SPARQL": "SELECT ?locationName WHERE { hp:Dumbledores_army hp:headquarters ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "What is the name of the organization that was established in 1997 to learn Defence Against the Dark Arts?",
+        "SPARQL": "SELECT ?name WHERE { hp:Dumbledores_army hp:name ?name ; hp:founded hp:1997 ; hp:intentions hp:Defence_against_the_dark_arts .}"
+    },
+    {
+        "question": "What is the name of the headquarters of the British Ministry of Magic?",
+        "SPARQL": "SELECT ?name WHERE { hp:Wizengamot hp:name ?name ; hp:headquarters hp:British_ministry_of_magic .}"
+    },
+    {
+        "question": "Who are the individuals that demonstrate loyalty to Albus Dumbledore?",
+        "SPARQL": "SELECT ?individualName WHERE { ?individual hp:loyalty hp:Albus_dumbledore . ?individual hp:name ?individualName .}"
+    },
+    {
+        "question": "Which individuals possess the Elder wand?",
+        "SPARQL": "SELECT ?ownerName WHERE { hp:Elder_wand hp:owners ?owner . ?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "Who is the owner of the Hogwarts castle?",
+        "SPARQL": "SELECT ?ownerName WHERE { hp:Hogwarts_castle hp:owner ?owner . ?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "What is the name of the organization, headed by Albus Dumbledore, that is hostile to the British Ministry of Magic and has its base of operations located within the Ministry itself?",
+        "SPARQL": "SELECT ?name WHERE { hp:Wizengamot hp:leader hp:Albus_dumbledore ; hp:name ?name ; hp:enemies hp:Order_of_the_phoenix .}"
+    },
+    {
+        "question": "What are the organizations that are affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPARQL": "SELECT ?organization_name WHERE { ?organization hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?organization_name .}"
+    }
+]

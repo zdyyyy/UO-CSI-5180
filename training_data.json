@@ -1,0 +1,1042 @@
+[
+    {
+        "question": "Who are the individuals who have held the title 'Minister for Magic'?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:title hp:Minister_for_magic. }"
+    },
+    {
+        "question": "What is the blood status of Cornelius Fudge and Pius Thicknesse?",
+        "SPQRQL": "SELECT ?individual ?blood WHERE { ?individual a hp:Individual_ ; hp:blood ?blood . FILTER (?individual IN (hp:Cornelius_fudge, hp:Pius_thicknesse)) }"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy .}"
+    },
+    {
+        "question": "What is the location of London and who are its residents?",
+        "SPQRQL": "SELECT ?location ?resident WHERE { hp:London hp:location ?location . OPTIONAL {?location hp:residents ?resident .}}"
+    },
+    {
+        "question": "Which individuals have a boggart that transforms into Tom Riddle?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:boggart hp:Tom_riddle . }"
+    },
+    {
+        "question": "Which organisations are affiliated with the Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?organisation WHERE { ?organisation hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry . FILTER (?organisation != hp:Hogwarts_school_of_witchcraft_and_wizardry)}"
+    },
+    {
+        "question": "What is the boggart of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?boggart WHERE { hp:Cornelius_fudge hp:boggart ?boggart .}"
+    },
+    {
+        "question": "Who is the Minister for Magic during Hector Fawley's term?",
+        "SPQRQL": "SELECT ?minister WHERE { hp:Hector_fawley hp:title 'Minister_for_magic' . hp:Ministry_of_magic hp:leader ?minister .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "What is the blood status of Pius Thicknesse?",
+        "SPQRQL": "SELECT ?blood WHERE { hp:Pius_thicknesse hp:blood ?blood .}"
+    },
+    {
+        "question": "Where is the location of Whitehall?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Whitehall hp:location ?location .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . }"
+    },
+    {
+        "question": "Who is the wife of Marietta Edgecombe's father?",
+        "SPQRQL": "SELECT ?wife WHERE { hp:Marietta_edgecombes_father hp:wife ?wife .}"
+    },
+    {
+        "question": "Which individuals have loyalty to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "Who are the residents of London?",
+        "SPQRQL": "SELECT ?resident WHERE { hp:London hp:residents ?resident . }"
+    },
+    {
+        "question": "What is the job of Millicent Bagnold?",
+        "SPQRQL": "SELECT ?job WHERE { hp:Millicent_bagnold hp:job ?job .}"
+    },
+    {
+        "question": "Who are the male individuals that have served as Minister for Magic?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:gender hp:Male ; hp:job hp:Minister_for_magic ; hp:name ?individualName .}"
+    },
+    {
+        "question": "What is the location of the Edgecombe family?",
+        "SPQRQL": "SELECT ?locationName WHERE { hp:Edgecombe_family hp:location ?locationName .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?memberName WHERE { hp:Edgecombe_family hp:members ?member ; hp:name hp:Edgecombe_family . ?member hp:name ?memberName .}"
+    },
+    {
+        "question": "Which organisations does Cornelius Fudge have loyalty to?",
+        "SPQRQL": "SELECT ?organisationName WHERE { hp:Cornelius_fudge hp:loyalty ?organisation ; hp:name hp:Cornelius_fudge . ?organisation hp:name ?organisationName .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemyName WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy ; hp:name hp:International_confederation_of_wizards . ?enemy hp:name ?enemyName .}"
+    },
+    {
+        "question": "What is the blood status of Pius Thicknesse?",
+        "SPQRQL": "SELECT ?bloodStatus WHERE { hp:Pius_thicknesse hp:blood ?blood ; hp:name hp:Pius_thicknesse . ?blood rdfs:label ?bloodStatus .}"
+    },
+    {
+        "question": "What is the gender of Hector Fawley?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Hector_fawley hp:gender ?gender ; hp:name hp:Hector_fawley .}"
+    },
+    {
+        "question": "Which individuals have the loyalty of the Edgecombe family?",
+        "SPQRQL": "SELECT ?individualName WHERE { hp:Edgecombe_family hp:loyalty ?loyalty ; hp:name hp:Edgecombe_family . ?individual hp:loyalty ?loyalty ; hp:name ?individualName .}"
+    },
+    {
+        "question": "What is the species of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?species WHERE { hp:Gellert_grindelwald hp:species ?species ; hp:name hp:Gellert_grindelwald .}"
+    },
+    {
+        "question": "What is the affiliation of Millicent Bagnold?",
+        "SPQRQL": "SELECT ?affiliationName WHERE { hp:Millicent_bagnold hp:affiliation ?affiliation ; hp:name hp:Millicent_bagnold . ?affiliation hp:name ?affiliationName .}"
+    },
+    {
+        "question": "What are the names and birth dates of all the female Nobel laureates in physics?",
+        "SPQRQL": "SELECT ?name ?birthdate WHERE { ?person a dbo:NobelPrizeWinner ; dbo:nobelPrizeFor dbr:Physics ;dbo:gender \"female\"@en ; dbo:birthDate ?birthdate ; foaf:name ?name .}"
+    },
+    {
+        "question": "What is the affiliation of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:International_confederation_of_wizards hp:affiliation ?affiliation . }"
+    },
+    {
+        "question": "Who is the leader of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Ministry_of_magic hp:leader ?leader .}"
+    },
+    {
+        "question": "What is the gender of Hector Fawley?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Hector_fawley hp:gender ?gender .}"
+    },
+    {
+        "question": "What is the location of Whitehall?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Whitehall hp:location ?location . }"
+    },
+    {
+        "question": "What is the species of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?species WHERE { hp:Gellert_grindelwald hp:species ?species . } "
+    },
+    {
+        "question": "What is the job of Hermione Granger?",
+        "SPQRQL": "SELECT ?job WHERE { hp:Hermione_granger hp:job ?job . }"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . }"
+    },
+    {
+        "question": "What is the status of the Edgecombe family?",
+        "SPQRQL": "SELECT ?status WHERE { hp:Edgecombe_family hp:status ?status . } "
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member . }"
+    },
+    {
+        "question": "What are the names of all individuals who have served as Minister for Magic and belong to a wizarding family of unknown degree?",
+        "SPQRQL": "SELECT DISTINCT ?ministerName WHERE { ?minister hp:title hp:Minister_for_magic ; hp:job hp:Minister_for_magic ; hp:blood hp:Wizarding_family_of_unknown_degree . }"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family who attended Hogwarts School of Witchcraft and Wizardry and were sorted into Ravenclaw?",
+        "SPQRQL": "SELECT DISTINCT ?memberName WHERE { hp:Edgecombe_family hp:members ?member . ?member hp:house hp:Ravenclaw ; hp:name ?memberName . }"
+    },
+    {
+        "question": "Who are the individuals who have a patronus that is non-corporeal and have served as Minister for Magic?",
+        "SPQRQL": "SELECT DISTINCT ?ministerName WHERE { ?minister hp:title hp:Minister_for_magic ; hp:patronus hp:Non_corporeal ; hp:species hp:Human .}"
+    },
+    {
+        "question": "What are the names of all individuals who are not human and have served as Minister for Magic?",
+        "SPQRQL": "SELECT DISTINCT ?ministerName WHERE { ?minister hp:title hp:Minister_for_magic ; hp:species ?species . FILTER (?species != hp:Human) ?minister hp:name ?ministerName . }"
+    },
+    {
+        "question": "What are the names of all individuals who are affiliated with the British Ministry of Magic, are enemies of Gellert Grindelwald, and have served as Minister for Magic?",
+        "SPQRQL": "SELECT DISTINCT ?ministerName WHERE { ?minister hp:affiliation hp:British_ministry_of_magic ; hp:name ?ministerName . ?icw hp:enemies hp:Gellert_grindelwald . FILTER NOT EXISTS { ?minister hp:loyalty ?loyalty . FILTER (?loyalty != hp:British_ministry_of_magic)} FILTER NOT EXISTS { ?minister hp:enemies hp:Gellert_grindelwald . }}"
+    },
+    {
+        "question": "What is the blood status and boggart of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?bloodStatus ?boggart WHERE { hp:Cornelius_fudge hp:blood ?bloodStatus ; hp:boggart ?boggart . }"
+    },
+    {
+        "question": "Who are the known members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "Which organisations is Marietta Edgecombe loyal to?",
+        "SPQRQL": "SELECT ?loyalty WHERE { hp:Edgecombe_family hp:loyalty ?loyalty . OPTIONAL { ?member hp:loyalty ?loyalty . FILTER(?member IN (hp:Marietta_edgecombe, hp:Marietta_edgecombes_father, hp:Marietta_edgecombes_mother))}}"
+    },
+    {
+        "question": "What is the gender and blood status of Pius Thicknesse?",
+        "SPQRQL": "SELECT ?gender ?bloodStatus WHERE { hp:Pius_thicknesse hp:gender ?gender ; hp:blood ?bloodStatus .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . } "
+    },
+    {
+        "question": "What is the location of Whitehall?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Whitehall hp:location ?location . } "
+    },
+    {
+        "question": "Who are the residents of London?",
+        "SPQRQL": "SELECT ?resident WHERE { hp:London hp:residents ?resident . } "
+    },
+    {
+        "question": "What is the job title of Hermione Granger and which organisations is she loyal to?",
+        "SPQRQL": "SELECT ?jobTitle ?loyalty WHERE { hp:Hermione_granger hp:title ?jobTitle ; hp:loyalty ?loyalty . }"
+    },
+    {
+        "question": "Who is Cornelius Fudge?",
+        "SPQRQL": "SELECT ?individual WHERE { hp:Cornelius_fudge rdf:type hp:Individual_ . ?individual rdf:type hp:Individual_ . FILTER(?individual = hp:Cornelius_fudge)}"
+    },
+    {
+        "question": "What is the nationality of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?nationality WHERE { hp:Cornelius_fudge hp:nationality ?nationality . }"
+    },
+    {
+        "question": "Who are the ministers for magic that have the same title as Hector Fawley?",
+        "SPQRQL": "SELECT ?minister WHERE { hp:Hector_fawley hp:title ?title . ?minister hp:title ?title . FILTER(?minister != hp:Hector_fawley) }"
+    },
+    {
+        "question": "What is the boggart of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?boggart WHERE { hp:Cornelius_fudge hp:boggart ?boggart .} "
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member . } "
+    },
+    {
+        "question": "Who is the leader of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Ministry_of_magic hp:leader ?leader .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy .}"
+    },
+    {
+        "question": "Who has Tom Riddle as a boggart?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:boggart hp:Tom_riddle . }"
+    },
+    {
+        "question": "What is the affiliation of the Ministry of Magic and who is its leader?",
+        "SPQRQL": "SELECT ?affiliation ?leader WHERE { hp:Ministry_of_magic hp:affiliation ?affiliation . hp:Ministry_of_magic hp:leader ?leader .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family and what is their house?",
+        "SPQRQL": "SELECT ?member ?house WHERE { hp:Edgecombe_family hp:members ?member . ?member hp:house ?house .}"
+    },
+    {
+        "question": "Who was the Minister for Magic before Cornelius Fudge?",
+        "SPQRQL": "SELECT ?minister WHERE { ?minister hp:title hp:Minister_for_magic ; hp:job hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic ; hp:species hp:Human . FILTER (?minister != hp:Cornelius_fudge)}"
+    },
+    {
+        "question": "Which individuals have served as Minister for Magic and are associated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?minister WHERE { ?minister hp:title hp:Minister_for_magic ; hp:job hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:species hp:Human .}"
+    },
+    {
+        "question": "Who is/was a member of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "What is the location of the Whitehall building?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Whitehall hp:location ?location . }"
+    },
+    {
+        "question": "Which organizations are enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy .}"
+    },
+    {
+        "question": "What is the name of the organization associated with Hermione Granger?",
+        "SPQRQL": "SELECT ?organization WHERE { hp:Hermione_granger hp:loyalty ?organization . FILTER (?organization != hp:British_ministry_of_magic)}"
+    },
+    {
+        "question": "What is Cornelius Fudge's gender?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Cornelius_fudge hp:gender ?gender . }"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member . }"
+    },
+    {
+        "question": "What is the status of the Edgecombe family?",
+        "SPQRQL": "SELECT ?status WHERE { hp:Edgecombe_family hp:status ?status . }"
+    },
+    {
+        "question": "What are the names and blood statuses of all the individuals who have been Ministers for Magic?",
+        "SPQRQL": "SELECT ?name ?blood_status WHERE { ?minister a hp:Individual_ ; hp:title hp:Minister_for_magic ; hp:name ?name ; hp:blood ?blood_status . }"
+    },
+    {
+        "question": "Which organisations have affiliations with both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?org_name WHERE { ?org a hp:Organisation_ ; hp:affiliation hp:British_ministry_of_magic ; hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?org_name .}"
+    },
+    {
+        "question": "Which individuals have the same blood status as Pius Thicknesse and are affiliated with either the British Ministry of Magic or the Death Eaters?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual a hp:Individual_ ; hp:blood ?blood_status ; hp:loyalty hp:British_ministry_of_magic, hp:Death_eaters ; hp:name ?name . { SELECT ?blood_status WHERE { hp:Pius_thicknesse hp:blood ?blood_status .}}}"
+    },
+    {
+        "question": "What are the blood statuses of individuals who have been Minister for Magic?",
+        "SPQRQL": "SELECT ?name ?blood WHERE { ?person hp:title hp:Minister_for_magic ; hp:name ?name ; hp:blood ?blood . }"
+    },
+    {
+        "question": "What is the blood status and house of Marietta Edgecombe?",
+        "SPQRQL": "SELECT ?blood ?house WHERE { hp:Marietta_edgecombe hp:blood ?blood ; hp:house ?house . }"
+    },
+    {
+        "question": "Who are the individuals who have loyalty to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { ?person hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?name .}"
+    },
+    {
+        "question": "Who are the individuals who have loyalty to the British Ministry of Magic and are also associated with the Death Eaters?",
+        "SPQRQL": "SELECT ?name WHERE { ?person hp:loyalty hp:British_ministry_of_magic, hp:Death_eaters ; hp:name ?name .}"
+    },
+    {
+        "question": "What is the gender and location of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?gender ?location WHERE { hp:Gellert_grindelwald hp:gender ?gender ; hp:location ?location .}"
+    },
+    {
+        "question": "Who were the individuals who were loyal to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?individualName  WHERE { ?individual hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry . ?individual hp:name ?individualName .}"
+    },
+    {
+        "question": "Who were the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemyName  WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?enemyName .}"
+    },
+    {
+        "question": "Who were the individuals who had the job of Minister for Magic and were Half-blood or Pure-blood?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:job hp:Minister_for_magic . ?individual hp:blood hp:Half_blood, hp:Pure_blood . ?individual hp:name ?individualName . }"
+    },
+    {
+        "question": "Who were the individuals who had a Non-corporeal patronus?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:patronus hp:Non_corporeal . ?individual hp:name ?individualName . }"
+    },
+    {
+        "question": "Who were the individuals who were born in Great Britain and had the job of Minister for Magic?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:born hp:Great_britain . ?individual hp:job hp:Minister_for_magic . ?individual hp:name ?individualName . }"
+    },
+    {
+        "question": "Who were the individuals who had Tom Riddle as their boggart?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:boggart hp:Tom_riddle . ?individual hp:name ?individualName .}"
+    },
+    {
+        "question": "What are the names of all individuals who have served as Minister for Magic?",
+        "SPQRQL": "SELECT ?name WHERE { ?minister hp:title hp:Minister_for_magic . ?minister hp:name ?name . }"
+    },
+    {
+        "question": "Which individual's boggart is Tom Riddle?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual hp:boggart hp:Tom_riddle . ?individual hp:name ?name . }"
+    },
+    {
+        "question": "Who are the individuals that belong to the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "What are the names of all the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?name . }"
+    },
+    {
+        "question": "Who are the individuals that have served as Minister for Magic and are affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { ?minister hp:title hp:Minister_for_magic . ?minister hp:name ?name . ?minister hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What are the genders of individuals who are affiliated with the British Ministry of Magic?",
+        "SPQRQL": "SELECT DISTINCT ?gender WHERE { ?individual hp:loyalty hp:British_ministry_of_magic . ?individual hp:gender ?gender . }"
+    },
+    {
+        "question": "Who are the individuals that have served as Minister for Magic and have a non-corporeal patronus?",
+        "SPQRQL": "SELECT ?name WHERE { ?minister hp:title hp:Minister_for_magic . ?minister hp:patronus hp:Non_corporeal . ?minister hp:name ?name . }"
+    },
+    {
+        "question": "What is the nationality of Hector Fawley?",
+        "SPQRQL": "SELECT ?nationality WHERE { hp:Hector_fawley hp:nationality ?nationality . }"
+    },
+    {
+        "question": "Who are the individuals that have the job title of Minister for Magic and have served as a leader of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { ?minister hp:title hp:Minister_for_magic . ?minister hp:job hp:Minister_for_magic . ?minister hp:leader ?minister . ?minister hp:name ?name .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family and what is their status?",
+        "SPQRQL": "SELECT ?name ?member ?status WHERE { hp:Edgecombe_family hp:name ?name ; hp:members ?member ; hp:status ?status .}"
+    },
+    {
+        "question": "What is the job of Cornelius Fudge and what is his boggart?",
+        "SPQRQL": "SELECT ?job ?boggart WHERE { hp:Cornelius_fudge hp:job ?job ; hp:boggart ?boggart .}"
+    },
+    {
+        "question": "What is the location of Whitehall and who are its affiliations?",
+        "SPQRQL": "SELECT ?name ?location ?affiliation WHERE { hp:Whitehall hp:name ?name ; hp:location ?location ; hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "Who is the wife of Marietta Edgecombe's father?",
+        "SPQRQL": "SELECT ?wife WHERE { hp:Marietta_edgecombes_father hp:wife ?wife .}"
+    },
+    {
+        "question": "Which organizations have the enemies 'Death Eaters', 'Order of the Phoenix', and 'Tom Riddle'?",
+        "SPQRQL": "SELECT ?orgName WHERE { ?org a hp:Organisation_ ; hp:name ?orgName ; hp:enemies hp:Death_eaters, hp:Order_of_the_phoenix, hp:Tom_riddle .}"
+    },
+    {
+        "question": "What are the headquarters of the organizations with the intention of 'reverting the consequences of major magical mishaps'?",
+        "SPQRQL": "SELECT ?orgName ?headquarters WHERE { ?org a hp:Organisation_ ; hp:name ?orgName ; hp:intentions hp:Reverting_the_consequences_of_major_magical_mishaps ; hp:headquarters ?headquarters .}"
+    },
+    {
+        "question": "Who were the male advisors to the Minister for Magic?",
+        "SPQRQL": "SELECT ?advisor WHERE { ?advisor hp:gender hp:Male . ?advisor hp:job hp:Advisor_to_the_minister_for_magic .}"
+    },
+    {
+        "question": "What are the affiliations and intentions of the Department of Magical Accidents and Catastrophes?",
+        "SPQRQL": "SELECT ?affiliation ?intention WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:affiliation ?affiliation . hp:Department_of_magical_accidents_and_catastrophes hp:intentions ?intention .}"
+    },
+    {
+        "question": "Who are the individuals with the loyalty to the British Ministry of Magic, the Order of the Phoenix, and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:loyalty hp:British_ministry_of_magic . ?individual hp:loyalty hp:Order_of_the_phoenix . ?individual hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "Which organisations have enemies in common with the Department of Magical Accidents and Catastrophes?",
+        "SPQRQL": "SELECT DISTINCT ?org1 ?org2 WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:enemies ?enemy . ?org1 hp:enemies ?enemy . ?org2 hp:enemies ?enemy . FILTER(?org1 != ?org2) }"
+    },
+    {
+        "question": "Who are the individuals with the title of Chief Warlock and their gender?",
+        "SPQRQL": "SELECT ?name ?gender WHERE { ?individual hp:job hp:Chief_warlock ; hp:title hp:Chief_warlock . ?individual hp:name ?name . ?individual hp:gender ?gender .}"
+    },
+    {
+        "question": "What are the locations of the Minister for Magic's office and the British Ministry of Magic headquarters?",
+        "SPQRQL": "SELECT ?office_location ?headquarters_location WHERE { hp:Minister_for_magics_office hp:location ?office_location . hp:British_ministry_of_magic_headquarters hp:location ?headquarters_location .}"
+    },
+    {
+        "question": "Who are the individuals with the job of Stylish Wizard of the Year?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:job hp:Stylish_wizard_of_the_year . }"
+    },
+    {
+        "question": "Who are the half-bloods?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:blood hp:Half_blood .}"
+    },
+    {
+        "question": "What are the names of the organisations with the colour codes #9966cc and #C9a0dc?",
+        "SPQRQL": "SELECT ?name WHERE { ?org hp:bgcolor hp:9966cc, hp:C9a0dc . ?org hp:name ?name . }"
+    },
+    {
+        "question": "Who are the individuals with Hermione Granger's job and title?",
+        "SPQRQL": "SELECT ?individual WHERE { ?individual hp:job hp:Department_of_magical_law_enforcement, hp:Minister_for_magic . ?individual hp:title hp:Department_of_magical_law_enforcement, hp:Minister_for_magic . }"
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    },
+    {
+        "question": "",
+        "SPQRQL": ""
+    }
+]

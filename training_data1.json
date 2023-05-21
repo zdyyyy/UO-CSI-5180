@@ -1,0 +1,1005 @@
+[
+    
+    {
+        "question": "What is the blood status of Cornelius Fudge and Pius Thicknesse?",
+        "SPQRQL": "SELECT ?fudgeBlood ?thicknesseBlood WHERE { hp:Cornelius_fudge hp:blood ?fudgeBlood .hp:Pius_thicknesse hp:blood ?thicknesseBlood .}"
+    },
+    {
+        "question": "Who is the leader of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?ministerName WHERE { hp:Ministry_of_magic hp:leader ?minister .?minister hp:name ?ministerName .}"
+    },
+    {
+        "question": "What are the affiliations of the Edgecombe family?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:Edgecombe_family hp:loyalty ?affiliation .}"
+    },
+    {
+        "question": "What is the gender of Gellert Grindelwald and Marietta Edgecombe's father?",
+        "SPQRQL": "SELECT ?grindelwaldGender ?edgecombeFatherGender WHERE { hp:Gellert_grindelwald hp:gender ?grindelwaldGender . hp:Marietta_edgecombes_father hp:gender ?edgecombeFatherGender .}"
+    },
+    {
+        "question": "Who are the residents of London?",
+        "SPQRQL": "SELECT ?resident WHERE { hp:London hp:residents ?resident .}"
+    },
+    {
+        "question": "Who are the individuals that have served as the Minister for Magic?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:job hp:Minister_for_magic ; hp:name ?minister_name .}"
+    },
+    {
+        "question": "What is the blood status of the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?blood_status WHERE { hp:Edgecombe_family hp:members ?edgecombe_member ; hp:blood ?blood_status .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy_name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy ; hp:name ?enemy_name .}"
+    },
+    {
+        "question": "What is the location of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?location_name WHERE { hp:Ministry_of_magic hp:affiliation hp:British_ministry_of_magic ; hp:location ?location ; hp:name ?location_name .}"
+    },
+    {
+        "question": "Who are the members of the Order of the Phoenix?",
+        "SPQRQL": "SELECT ?member_name WHERE { hp:Order_of_the_phoenix hp:affiliation hp:British_ministry_of_magic ; hp:members ?member ; hp:name ?member_name .}"
+    },
+    {
+        "question": "What is the name and gender of the father of Marietta Edgecombe?",
+        "SPQRQL": "SELECT ?father_name ?gender WHERE { hp:Marietta_edgecombes_father hp:daughter hp:Marietta_edgecombe ; hp:name ?father_name ; hp:gender ?gender .}"
+    },
+    {
+        "question": "What is the skin color of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?skin_color WHERE { hp:Cornelius_fudge hp:skin ?skin_color .}"
+    },
+    {
+        "question": "Who are the individuals that have the job title of Minister for Magic and are loyal to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:job hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?minister_name .}"
+    },
+    {
+        "question": "What is the name of the location that is both in London and in England?",
+        "SPQRQL": "SELECT ?location_name WHERE { hp:London hp:location hp:England, hp:London ; hp:name ?location_name .}"
+    },
+    {
+        "question": "Who are the individuals that have served as the Minister for Magic and are Pure-blood?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:job hp:Minister_for_magic ; hp:blood hp:Pure_blood ; hp:name ?minister_name .}"
+    },
+    {
+        "question": "Who are the individuals who have been a Minister for Magic?",
+        "SPQRQL": "SELECT ?ministerName WHERE { ?minister a hp:Individual_ . ?minister hp:title hp:Minister_for_magic . ?minister hp:name ?ministerName .}"
+    },
+    {
+        "question": "What is the affiliation of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:International_confederation_of_wizards hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the location of London and who are its residents?",
+        "SPQRQL": "SELECT ?residentName WHERE { hp:London hp:location hp:Great_britain . OPTIONAL { hp:London hp:residents ?resident .?resident hp:name ?residentName }}"
+    },
+    {
+        "question": "What is the name and blood status of the Edgecombe family?",
+        "SPQRQL": "SELECT ?familyName ?bloodStatus WHERE { hp:Edgecombe_family hp:name ?familyName . hp:Edgecombe_family hp:blood ?bloodStatus .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?memberName WHERE { hp:Edgecombe_family hp:members ?member . ?member hp:name ?memberName .}"
+    },
+    {
+        "question": "Who is the Minister for Magic that is a Half-blood and loyal to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:job hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:blood hp:Half_blood .}"
+    },
+    {
+        "question": "What is the name and affiliation of the organisation that Hector Fawley belonged to?",
+        "SPQRQL": "SELECT ?organisation_name ?affiliation WHERE { hp:Hector_fawley hp:job hp:Minister_for_magic ; hp:affiliation ?affiliation . ?affiliation hp:name ?organisation_name .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy_name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?enemy_name .}"
+    },
+    {
+        "question": "What is the location of the Edgecombe family?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Edgecombe_family hp:location ?location .}"
+    },
+    {
+        "question": "Who is the Minister for Magic that is affiliated with Ravenclaw, the British Ministry of Magic, and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:job hp:Minister_for_magic ; hp:affiliation hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry, hp:Ravenclaw .}"
+    },
+    {
+        "question": "What is the name and blood status of the Minister for Magic who is afraid of Tom Riddle?",
+        "SPQRQL": "SELECT ?name ?blood_status WHERE { ?minister a hp:Individual_ ; hp:name ?name ; hp:blood ?blood_status ; hp:job hp:Minister_for_magic ; hp:boggart hp:Tom_riddle .}"
+    },
+    {
+        "question": "What is the name and blood status of the Minister for Magic who is not loyal to the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name ?blood_status WHERE { ?minister a hp:Individual_ ; hp:name ?name ; hp:blood ?blood_status ; hp:job hp:Minister_for_magic ; hp:loyalty ?loyalty .FILTER NOT EXISTS {?minister hp:loyalty hp:British_ministry_of_magic .}}"
+    },
+    {
+        "question": "What is the name and blood status of the Minister for Magic who was born in Great Britain and is loyal to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name ?blood_status WHERE { ?minister a hp:Individual_ ; hp:name ?name ; hp:blood ?blood_status ; hp:job hp:Minister_for_magic ; hp:born hp:Great_britain ; hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What are the names of the members of the Edgecombe family who are affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?member_name WHERE { hp:Edgecombe_family hp:members ?member . ?member hp:name ?member_name ; hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What are the names of the individuals and organisations that are enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy_name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?enemy_name .}"
+    },
+    {
+        "question": "What is the name of the individual who resides in London and is an enemy of Tom Riddle?",
+        "SPQRQL": "SELECT ?name WHERE { hp:London hp:residents ?resident . ?resident a hp:Individual_ ; hp:name ?name ; hp:enemy_of hp:Tom_riddle .}"
+    },
+    {
+        "question": "What is the full name of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?full_name WHERE { hp:Cornelius_fudge hp:name ?full_name.}"
+    },
+    {
+        "question": "Who is the leader of the Ministry of Magic?",
+        "SPQRQL": "SELECT ?leader_name WHERE { hp:Ministry_of_magic hp:leader ?leader. ?leader hp:name ?leader_name.}"
+    },
+    {
+        "question": "Who are the individuals who served as Minister for Magic?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister a hp:Individual_ ; hp:title hp:Minister_for_magic ; hp:name ?minister_name .}"
+    },
+    {
+        "question": "What is the blood status of Pius Thicknesse?",
+        "SPQRQL": "SELECT ?blood_status WHERE {hp:Pius_thicknesse hp:blood ?blood_status.}"
+    },
+    {
+        "question": "Where is Whitehall located?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Whitehall hp:location ?location.}"
+    },
+    {
+        "question": "What is the gender of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Gellert_grindelwald hp:gender ?gender.}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy_name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy. ?enemy hp:name ?enemy_name.}"
+    },
+    {
+        "question": "Who are the residents of London?",
+        "SPQRQL": "SELECT ?resident_name WHERE { hp:London hp:residents ?resident. ?resident hp:name ?resident_name.}"
+    },
+    {
+        "question": "What is the status of the Edgecombe family?",
+        "SPQRQL": "SELECT ?status WHERE { hp:Edgecombe_family hp:status ?status.}"
+    },
+    {
+        "question": "Who are the male ministers for magic in the Harry Potter series?",
+        "SPQRQL": "SELECT ?minister WHERE { ?minister hp:gender hp:Male ; hp:job hp:Minister_for_magic .}"
+    },
+    {
+        "question": "What is the affiliation of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:International_confederation_of_wizards hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the location of London in the Harry Potter series?",
+        "SPQRQL": "SELECT ?location WHERE { hp:London hp:location ?location .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family in the Harry Potter series?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "What is the blood status of Gellert Grindelwald in the Harry Potter series?",
+        "SPQRQL": "SELECT ?blood_status WHERE { hp:Gellert_grindelwald hp:blood ?blood_status .}"
+    },
+    {
+        "question": "Who are the individuals that held the position of Minister for Magic?",
+        "SPQRQL": "SELECT ?individuals WHERE { ?individuals hp:title hp:Minister_for_magic.}"
+    },
+    {
+        "question": "What is the affiliation of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:International_confederation_of_wizards hp:affiliation ?affiliation.}"
+    },
+    {
+        "question": "What is the name and location of the ministry for magic?",
+        "SPQRQL": "SELECT ?name ?location WHERE { hp:Ministry_of_magic hp:name ?name. hp:Whitehall hp:name ?location.}"
+    },
+    {
+        "question": "What are the houses that the Edgecombe family is affiliated with?",
+        "SPQRQL": "SELECT ?house WHERE { hp:Edgecombe_family hp:house ?house.}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemies WHERE { hp:International_confederation_of_wizards hp:enemies ?enemies.}"
+    },
+    {
+        "question": "What is the gender of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Gellert_grindelwald hp:gender ?gender.}"
+    },
+    {
+        "question": "What is the blood status of Hermione Granger?",
+        "SPQRQL": "SELECT ?blood_status WHERE { hp:Hermione_granger hp:blood ?blood_status.}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?members WHERE { hp:Edgecombe_family hp:members ?members.}"
+    },
+    {
+        "question": "What is the job of Millicent Bagnold?",
+        "SPQRQL": "SELECT ?job WHERE { hp:Millicent_bagnold hp:job ?job.}"
+    },
+    {
+        "question": "Who are the daughters of Marietta Edgecombe's father?",
+        "SPQRQL": "SELECT ?daughter WHERE { hp:Marietta_edgecombes_father hp:daughter ?daughter.}"
+    },
+    {
+        "question": "What is the blood status of Cornelius Fudge and Pius Thicknesse?",
+        "SPQRQL": "SELECT ?fudgeBlood ?thicknesseBlood WHERE { hp:Cornelius_fudge hp:blood ?fudgeBlood . hp:Pius_thicknesse hp:blood ?thicknesseBlood .}"
+    },
+    {
+        "question": "What is the job of Hector Fawley?",
+        "SPQRQL": "SELECT ?fawleyJob WHERE { hp:Hector_fawley hp:job ?fawleyJob .}"
+    },
+    {
+        "question": "What is the name and affiliation of the organization that is led by the Minister for Magic?",
+        "SPQRQL": "SELECT ?ministerName ?orgAffiliation WHERE { ?org hp:leader hp:Minister_for_magic . ?org hp:name ?orgName . hp:Ministry_of_magic hp:name ?ministryName . hp:Minister_for_magic hp:name ?ministerName . ?org hp:affiliation ?orgAffiliation .FILTER (?orgName = ?ministryName)}"
+    },
+    {
+        "question": "What is the location of the Edgecombe family?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Edgecombe_family hp:location ?location .}"
+    },
+    {
+        "question": "What is the blood status and house of the Edgecombe family?",
+        "SPQRQL": "SELECT ?bloodStatus ?house WHERE { hp:Edgecombe_family hp:blood ?bloodStatus . hp:Edgecombe_family hp:house ?house .}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member .}"
+    },
+    {
+        "question": "What are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy .}"
+    },
+    {
+        "question": "What is the name of the father of Marietta Edgecombe?",
+        "SPQRQL": "SELECT ?fatherName WHERE { hp:Marietta_edgecombes_father hp:name ?fatherName .}"
+    },
+    {
+        "question": "What is the gender of Mr. Edgecombe?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Mr_edgecombe hp:gender ?gender .}"
+    },
+    {
+        "question": "What is the affiliation of Millicent Bagnold?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:Millicent_bagnold hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the name of the individual who is affiliated with the International Confederation of Wizards and is an enemy of Gellert Grindelwald?",
+        "SPQRQL": "SELECT ?name WHERE { hp:International_confederation_of_wizards hp:affiliation ?affiliation ; hp:enemies hp:Gellert_grindelwald . ?enemy hp:name ?name ; hp:affiliation ?affiliation ; hp:enemies hp:Gellert_grindelwald . FILTER(?enemy != hp:International_confederation_of_wizards)}"
+    },
+    {
+        "question": "Who are the members of the Edgecombe family who are also affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?member WHERE { hp:Edgecombe_family hp:members ?member ; hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What is the blood status of Cornelius Fudge?",
+        "SPQRQL": "SELECT ?blood WHERE { hp:Cornelius_fudge hp:blood ?blood .}"
+    },
+    {
+        "question": "Who are the individuals who are enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy .}"
+    },
+    {
+        "question": "Who is the Minister for Magic with the job title 'Minister for Magic' and the loyalty to both the British Ministry of Magic and Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?minister WHERE { ?minister hp:job hp:Minister_for_magic ; hp:title hp:Minister_for_magic ; hp:loyalty hp:British_ministry_of_magic, hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "What is the name of the Minister for Magic who was a Half-blood and Pure-blood, and had Tom Riddle as their Boggart?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:blood hp:Half_blood, hp:Pure_blood ; hp:boggart hp:Tom_riddle ; hp:title hp:Minister_for_magic ; hp:name ?minister_name .}"
+    },
+    {
+        "question": "What are the names of the members of the Edgecombe family who are listed in the knowledge graph?",
+        "SPQRQL": "SELECT ?member_name WHERE { hp:Edgecombe_family hp:members ?member . ?member hp:name ?member_name .}"
+    },
+    {
+        "question": "Who was the Minister for Magic before Pius Thicknesse?",
+        "SPQRQL": "SELECT ?minister_name WHERE { ?minister hp:title hp:Minister_for_magic ; hp:job hp:Minister_for_magic ; hp:name ?minister_name ; hp:loyalty hp:British_ministry_of_magic ; hp:leader hp:Pius_thicknesse . FILTER NOT EXISTS { [] hp:leader ?minister .}}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy_name WHERE { hp:International_confederation_of_wizards hp:enemies ?enemy . ?enemy hp:name ?enemy_name .}"
+    },
+    {
+        "question": "Who are the residents of London according to the knowledge graph?",
+        "SPQRQL": "SELECT ?resident_name WHERE { hp:London hp:residents ?resident . ?resident hp:name ?resident_name .}"
+    },
+    {
+        "question": "What is the name and affiliation of the Minister for Magic?",
+        "SPQRQL": "SELECT ?name ?affiliation WHERE { hp:Minister_for_magics_office hp:name ?name . hp:Minister_for_magics_office hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What are the names of the individuals affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry . ?individual hp:name ?name .}"
+    },
+    {
+        "question": "What are the names of the individuals affiliated with the Order of the Phoenix?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual hp:loyalty hp:Order_of_the_phoenix . ?individual hp:name ?name .}"
+    },
+    {
+        "question": "What are the names of the individuals affiliated with the Department of Magical Law Enforcement?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual hp:job hp:Department_of_magical_law_enforcement . ?individual hp:name ?name .}"
+    },
+    {
+        "question": "What are the names of the individuals affiliated with the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { ?individual hp:affiliation hp:British_ministry_of_magic . ?individual hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for dealing with major magical accidents and catastrophes in the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the individual who was the Chief Warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the individual who won the Stylish Wizard of the Year award?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Stylish_wizard_of_the_year hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization that deals with improper use of magic in the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Improper_use_of_magic_office hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the individual who owns Cornelius Fudge's wand?",
+        "SPQRQL": "SELECT ?owner WHERE { hp:Cornelius_fudges_wand hp:owners ?owner .}"
+    },
+    {
+        "question": "What is the location of the Minister for Magic's office in the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Minister_for_magics_office hp:location ?location .}"
+    },
+    {
+        "question": "What is the name of the individual who is a member of the Order of the Phoenix and is also loyal to Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Peeves hp:loyalty hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:loyalty hp:Order_of_the_phoenix ; hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the individual who is a pure-blood and is named in the Harry Potter fandom wiki page for pure-bloods?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Pure_blood hp:source_url 'https://harrypotter.fandom.com/wiki/Pure-blood'^^xsd:string ;hp:mentions ?name .}"
+    },
+    {
+        "question": "What is the name of the organization that Hermione Granger works for?",
+        "SPQRQL": "SELECT ?organizationName WHERE { hp:Hermione_granger hp:job ?jobTitle. ?jobTitle hp:name ?organizationName .}"
+    },
+    {
+        "question": "What is the name of the individual who won the Stylish Wizard of the Year award?",
+        "SPQRQL": "SELECT ?individualName WHERE { hp:Stylish_wizard_of_the_year hp:name ?individualName.}"
+    },
+    {
+        "question": "What is the name of the individual who held the job title of Chief Warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?individualName WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?individualName.}"
+    },
+    {
+        "question": "What is the name of the organization responsible for dealing with magical accidents and catastrophes?",
+        "SPQRQL": "SELECT ?organizationName WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:name ?organizationName.}"
+    },
+    {
+        "question": "What is the source URL for the page about Pure-bloods?",
+        "SPQRQL": "SELECT ?sourceUrl WHERE { hp:Pure_blood hp:source_url ?sourceUrl.}"
+    },
+    {
+        "question": "What is the name of the organization responsible for dealing with improper use of magic?",
+        "SPQRQL": "SELECT ?organizationName WHERE { hp:Improper_use_of_magic_office hp:name ?organizationName.}"
+    },
+    {
+        "question": "What is the blood status of Queenie Goldstein?",
+        "SPQRQL": "SELECT ?bloodStatus WHERE { hp:Queenie_goldstein hp:blood ?bloodStatus.}"
+    },
+    {
+        "question": "What is the name of the individual who is Peeves loyal to?",
+        "SPQRQL": "SELECT ?individualName WHERE { hp:Peeves hp:loyalty ?loyaltyTo. ?loyaltyTo hp:name ?individualName.}"
+    },
+    {
+        "question": "What is the source URL for the page about the Order of Merlin?",
+        "SPQRQL": "SELECT ?sourceUrl WHERE { hp:Order_of_merlin hp:source_url ?sourceUrl.}"
+    },
+    {
+        "question": "What is the name of the educational office affiliated with the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Educational_office hp:name ?name ; hp:affiliation hp:International_confederation_of_wizards .}"
+    },
+    {
+        "question": "Who is the Chief Warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for dealing with improper use of magic in the Harry Potter universe?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Improper_use_of_magic_office hp:name ?name .}"
+    },
+    {
+        "question": "Who is the leader of the International Confederation of Wizards Educational Office?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Educational_office hp:leader ?leader .}"
+    },
+    {
+        "question": "What is the source URL for the article on the Stylish Wizard of the Year award?",
+        "SPQRQL": "SELECT ?source_url WHERE { hp:Stylish_wizard_of_the_year hp:source_url ?source_url .}"
+    },
+    {
+        "question": "Who is the Chief Warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name .}"
+    },
+    {
+        "question": "What is the location of the Minister for Magic's office?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Minister_for_magics_office hp:location ?location .}"
+    },
+    {
+        "question": "Who is the advisor to the Minister for Magic in the Harry Potter universe?",
+        "SPQRQL": "SELECT ?job_title WHERE { hp:Advisor_to_the_minister_for_magic hp:name ?job_title .}"
+    },
+    {
+        "question": "What is the color of the Department of Magical Accidents and Catastrophes in the Harry Potter universe?",
+        "SPQRQL": "SELECT ?bgcolor WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:bgcolor ?bgcolor .}"
+    },
+    {
+        "question": "Who is the nephew of Cornelius Fudge's wife?",
+        "SPQRQL": "SELECT ?nephew WHERE { hp:Cornelius_fudges_wife hp:nephew ?nephew .}"
+    },
+    {
+        "question": "What is the source URL for the article on the Order of Merlin in the Harry Potter universe?",
+        "SPQRQL": "SELECT ?source_url WHERE { hp:Order_of_merlin hp:source_url ?source_url .}"
+    },
+    {
+        "question": "What is the name of the Hogwarts house known for its wit and intelligence?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Ravenclaw hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization that Hermione Granger works for?",
+        "SPQRQL": "SELECT ?orgName WHERE { hp:Hermione_granger hp:job ?job . ?job hp:name ?orgName .}"
+    },
+    {
+        "question": "What is the name and source URL of the article about the Order of Merlin?",
+        "SPQRQL": "SELECT ?orderName ?sourceUrl WHERE { hp:Order_of_merlin hp:name ?orderName ; hp:source_url ?sourceUrl .}"
+    },
+    {
+        "question": "What is the name and affiliation of the educational office in the wizarding world?",
+        "SPQRQL": "SELECT ?name ?affiliation WHERE { hp:Educational_office hp:name ?name . hp:Educational_office hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the color of the background of the Department of Magical Accidents and Catastrophes, and what are its intentions?",
+        "SPQRQL": "SELECT ?bgcolor ?intentions WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:bgcolor ?bgcolor . hp:Department_of_magical_accidents_and_catastrophes hp:intentions ?intentions .}"
+    }
+    {
+        "question": "Who was the stylish wizard of the year, and what is the source URL of the information?",
+        "SPQRQL": "SELECT ?name ?source_url WHERE { hp:Stylish_wizard_of_the_year hp:source_url ?source_url . ?individual hp:name ?name . ?individual hp:theme hp:Stylish_wizard_of_the_year .}"
+    },
+    {
+        "question": "What is the blood status of Queenie Goldstein, and what is her species?",
+        "SPQRQL": "SELECT ?blood_status ?species WHERE { hp:Queenie_goldstein hp:blood ?blood_status . hp:Queenie_goldstein hp:species ?species .}"
+    },
+    {
+        "question": "What is the name of the individual who served as the chief warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for reverting the consequences of major magical mishaps? Give the SPARQL query to retrieve the answer.",
+        "SPQRQL": "SELECT ?name WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for handling magical accidents and catastrophes, and where is their headquarters located?",
+        "SPQRQL": "SELECT ?name ?headquarters WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:name ?name ; hp:headquarters ?headquarters .}"
+    },
+    {
+        "question": "Who is the stylish wizard of the year and what is the source URL for this information?",
+        "SPQRQL": "SELECT ?name ?sourceUrl WHERE { hp:Stylish_wizard_of_the_year hp:name ?name ; hp:source_url ?sourceUrl .}"
+    },
+    {
+        "question": "What is the name of the wand owned by Cornelius Fudge and who made it?",
+        "SPQRQL": "SELECT ?name ?madeBy WHERE { hp:Cornelius_fudges_wand hp:name ?name ; hp:made ?madeBy .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for handling improper use of magic, and who are their enemies?",
+        "SPQRQL": "SELECT ?name ?enemies WHERE { hp:Improper_use_of_magic_office hp:name ?name ; hp:enemies ?enemies .}"
+    },
+    {
+        "question": "Who is the chief warlock of the Wizengamot in 1544 and what is their gender?",
+        "SPQRQL": "SELECT ?name ?gender WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name ; hp:gender ?gender .}"
+    },
+    {
+        "question": "What is the name of the educational office that is affiliated with the International Confederation of Wizards and Wizardkind?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Educational_office hp:name ?name ; hp:affiliation hp:International_confederation_of_wizards, hp:Wizardkind .}"
+    },
+    {
+        "question": "What is the name of the individual who won the title of advisor to the Minister for Magic, and what is the source URL for this information?",
+        "SPQRQL": "SELECT ?name ?sourceUrl WHERE { hp:Advisor_to_the_minister_for_magic hp:name ?name ; hp:source_url ?sourceUrl .}"
+    },
+    {
+        "question": "What is the name of the organization that oversees the British Ministry of Magic, and where is their headquarters located?",
+        "SPQRQL": "SELECT ?name ?headquarters WHERE { hp:Minister_for_magics_office hp:name ?name ; hp:affiliation hp:British_ministry_of_magic ; hp:location ?headquarters .hp:British_ministry_of_magic_headquarters hp:"
+    },
+    {
+        "question": "What is the name of the organization that Hermione Granger works for?",
+        "SPQRQL": "SELECT ?organization_name WHERE { hp:Hermione_granger hp:job ?job_title . ?organization hp:name ?organization_name ; hp:leader ?leader . ?job_title rdfs:subClassOf ?job_class .?organization a ?job_class .}"
+    },
+    {
+        "question": "What is the name of the wand owned by Cornelius Fudge?",
+        "SPQRQL": "SELECT ?wand_name WHERE {hp:Cornelius_fudges_wand hp:name ?wand_name .}"
+    },
+    {
+        "question": "What is the affiliation of the Department of Magical Accidents and Catastrophes?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the gender of Peeves?",
+        "SPQRQL": "SELECT ?gender WHERE { hp:Peeves hp:gender ?gender .}"
+    },
+    {
+        "question": "What is the blood status of Queenie Goldstein?",
+        "SPQRQL": "SELECT ?blood_status WHERE { hp:Queenie_goldstein hp:blood ?blood_status .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for magical accidents and catastrophes, and what are their intentions?",
+        "SPQRQL": "SELECT ?name ?intentions WHERE { hp:Department_of_magical_accidents_and_catastrophes hp:name ?name ;hp:intentions ?intentions .}"
+    },
+    {
+        "question": "Who was the Chief Warlock of the Wizengamot in 1544, and what is their job title?",
+        "SPQRQL": "SELECT ?name ?job_title WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?name ; hp:title ?job_title .}"
+    },
+    {
+        "question": "What is the name of Cornelius Fudge's wand and when was it made?",
+        "SPQRQL": "SELECT ?name ?made WHERE { hp:Cornelius_fudges_wand hp:name ?name ;hp:made ?made .}"
+    },
+    {
+        "question": "What is the location and affiliation of the Minister for Magic's office?",
+        "SPQRQL": "SELECT ?location ?affiliation WHERE { hp:Minister_for_magics_office hp:location ?location ; hp:affiliation ?affiliation .}          "
+    },
+    {
+        "question": "What is the name of the wizarding organization responsible for dealing with improper use of magic, and who are their enemies?",
+        "SPQRQL": "SELECT ?name ?enemies WHERE { hp:Improper_use_of_magic_office hp:name ?name ; hp:enemies ?enemies .}"
+    },
+    {
+        "question": "What is the name of the individual who won the award for Stylish Wizard of the Year, and where can their source URL be found?",
+        "SPQRQL": "SELECT ?name ?source_url WHERE { hp:Stylish_wizard_of_the_year hp:name ?name ; hp:source_url ?source_url .}"
+    },
+    {
+        "question": "What is the name of the organization responsible for education, who do they lead, and what affiliations do they have?",
+        "SPQRQL": "SELECT ?name ?leader ?affiliation WHERE { hp:Educational_office hp:name ?name ; hp:leader ?leader ; hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What is the name and species of Queenie Goldstein?",
+        "SPQRQL": "SELECT ?name ?species WHERE { hp:Queenie_goldstein hp:name ?name ; hp:species ?species .}"
+    },
+    {
+        "question": "What is the source URL for the Order of Merlin and for the Advisor to the Minister for Magic?",
+        "SPQRQL": "SELECT ?order_source ?advisor_source WHERE { hp:Order_of_merlin hp:source_url ?order_source . hp:Advisor_to_the_minister_for_magic hp:source_url ?advisor_source .}"
+    },
+    {
+        "question": "Who won the Stylish Wizard of the Year award?",
+        "SPQRQL": "SELECT ?wizard_name WHERE { hp:Stylish_wizard_of_the_year hp:source_url ?source_url . ?award hp:source_url ?source_url . ?award hp:name 'Stylish Wizard of the Year'^^xsd:string .?award hp:winner ?wizard .?wizard hp:name ?wizard_name .}"
+    },
+    {
+        "question": "What is the affiliation and location of the British Ministry of Magic headquarters?",
+        "SPQRQL": "SELECT ?affiliation ?location WHERE { hp:British_ministry_of_magic_headquarters hp:affiliation ?affiliation . hp:British_ministry_of_magic_headquarters hp:location ?location .}"
+    },
+    {
+        "question": "Who was the Chief Warlock of the Wizengamot in 1544?",
+        "SPQRQL": "SELECT ?chief_warlock_name WHERE { hp:Chief_warlock_of_the_wizengamot_in_1544 hp:name ?chief_warlock_name .}"
+    },
+    {
+        "question": "What is the source URL for information about Cornelius Fudge's wand?",
+        "SPQRQL": "SELECT ?source_url WHERE { hp:Cornelius_fudges_wand hp:source_url ?source_url .}"
+    },
+    {
+        "question": "What is the name of the organization that deals with improper use of magic and what is its affiliation?",
+        "SPQRQL": "SELECT ?organization_name ?affiliation WHERE { ?organization a hp:Organisation; hp:name ?organization_name ; hp:affiliation ?affiliation ; hp:name 'Improper_use_of_magic_office'^^xsd:string .}"
+    },
+    {
+        "question": "What is the name of the office held by Hermione Granger?",
+        "SPQRQL": "SELECT ?office_name WHERE { hp:Hermione_granger hp:title ?title . ?title hp:name ?office_name .}"
+    },
+    {
+        "question": "Who is Queenie Goldstein and what is her blood status?",
+        "SPQRQL": "SELECT ?name ?blood_status WHERE { hp:Queenie_goldstein hp:name ?name ; hp:blood ?blood_status .}"
+    },
+    {
+        "question": "What is the name of the organization that deals with magical accidents and catastrophes?",
+        "SPQRQL": "SELECT ?organization_name WHERE { ?organization a hp:Organisation ; hp:name ?organization_name ; hp:name 'Department_of_magical_accidents_and_catastrophes'^^xsd:string .}"
+    },
+    {
+        "question": "What is the name of the Hogwarts house associated with the eagle?",
+        "SPQRQL": "SELECT ?house_name WHERE { hp:Ravenclaw hp:name ?house_name .}"
+    },
+    {
+        "question": "What is the source URL for information about the Order of Merlin?",
+        "SPQRQL": "SELECT ?source_url WHERE { hp:Order_of_merlin hp:source_url ?source_url .}"
+    },
+    {
+        "question": "What is the name of the organization led by Albus Dumbledore that is enemies with the Order of the Phoenix and headquartered in the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Wizengamot hp:leader hp:Albus_dumbledore ; hp:enemies hp:Order_of_the_phoenix ; hp:headquarters hp:British_ministry_of_magic ; hp:name ?name .}"
+    },
+    {
+        "question": "What are the names of the individuals who owned the Elder Wand?",
+        "SPQRQL": "SELECT ?name WHERE { ?elderWand hp:name 'Elder_wand' ; hp:owners ?owner . ?owner hp:name ?name .}"
+    },
+    {
+        "question": "Which Hogwarts professor taught Defence Against the Dark Arts and was a member of Dumbledore's Army?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Defence_against_the_dark_arts hp:professor ?prof ; hp:name 'Defence_against_the_dark_arts' . ?prof hp:name ?name ; hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry . hp:Dumbledores_army hp:leader ?leader ; hp:intentions hp:Defence_against_the_dark_arts . ?leader hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the location where the Council of Magical Law is located?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Council_of_magical_law hp:name ?name ; hp:affiliation hp:British_ministry_of_magic .}"
+    },
+    {
+        "question": "Who are the enemies of the Wizengamot?",
+        "SPQRQL": "SELECT ?enemy WHERE { hp:Wizengamot hp:enemies ?enemy .}"
+    },
+    {
+        "question": "Who is the Supreme Mugwump and the leader of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?name WHERE { hp:International_confederation_of_wizards hp:leader ?leader ; hp:name 'International_confederation_of_wizards' . ?leader hp:name ?name ;hp:title hp:Supreme_mugwump .}"
+    },
+    {
+        "question": "What is the name of the location affiliated with Astronomy Tower?",
+        "SPQRQL": "WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?name .}"
+    },
+    {
+        "question": "Who are the enemies of the Wizengamot and what is its headquarters?",
+        "SPQRQL": "SELECT ?enemy ?headquarters WHERE { hp:Wizengamot hp:enemies ?enemy ; hp:headquarters ?headquarters .} "
+    },
+    {
+        "question": "Who is the professor of Defence Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?professor WHERE { hp:Defence_against_the_dark_arts hp:professor ?professor .}"
+    },
+    {
+        "question": "Who are the owners of the Elder Wand?",
+        "SPQRQL": "SELECT ?owner WHERE { hp:Elder_wand hp:owners ?owner .}"
+    },
+    {
+        "question": "What is the affiliation of the Phoenix and what is its distinction?",
+        "SPQRQL": "SELECT ?affiliation ?distinction WHERE { hp:Phoenix hp:affiliation ?affiliation ; hp:distinction ?distinction .}"
+    },
+    {
+        "question": "Who founded Dumbledore's Army and what is its intention?",
+        "SPQRQL": "SELECT ?founder ?intention WHERE { hp:Dumbledores_army hp:founder ?founder ; hp:intentions ?intention .}"
+    },
+    {
+        "question": "What is the name of the individual who has the wand named 'Albus Dumbledore's Wand'?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Albus_dumbledores_wand hp:owners ?owner . ?owner hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the location affiliated with Mould on the Wold?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Mould_on_the_wold hp:location ?location . ?location hp:name ?name .}"
+    },
+    {
+        "question": " What is the name of the organization with the leader named 'Supreme Mugwump' and who are its enemies?",
+        "SPQRQL": "SELECT ?name ?enemies WHERE { ?org hp:leader hp:Supreme_mugwump ; hp:name ?name ; hp:enemies ?enemies .}"
+    },
+    {
+        "question": "Who are the residents of Mould on the Wold?",
+        "SPQRQL": "SELECT ?residents WHERE { hp:Mould_on_the_wold hp:residents ?residents .}"
+    },
+    {
+        "question": "What is the name of the location where the Wizengamot is headquartered?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Wizengamot hp:headquarters ?location . ?location hp:name ?name .}"
+    },
+    {
+        "question": "Who are the owners of the Elder Wand?",
+        "SPQRQL": "SELECT ?ownerName WHERE { hp:Elder_wand hp:owners ?owner .?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "What is the name of the organization founded in 1997 with the intention of teaching Defence Against the Dark Arts?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Dumbledores_army hp:founded '1997'^^xsd:string ; hp:intentions hp:Defence_against_the_dark_arts ; hp:name ?name .}"
+    },
+    {
+        "question": "Who is the Supreme Mugwump of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?leaderName WHERE { hp:International_confederation_of_wizards hp:leader hp:Supreme_mugwump ; hp:leader ?leader . ?leader hp:name ?leaderName .}"
+    },
+    {
+        "question": "What is the location of the Astronomy Tower?",
+        "SPQRQL": "SELECT ?locationName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "What is the name of the council of magical law affiliated with the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Council_of_magical_law hp:affiliation hp:British_ministry_of_magic ; hp:name ?name .}"
+    },
+    {
+        "question": "Who are the residents of Mould-on-the-Wold?",
+        "SPQRQL": "SELECT ?residents WHERE { hp:Mould_on_the_wold hp:residents ?residents .}"
+    },
+    {
+        "question": "Who is the professor of Defence Against the Dark Arts at Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?professor WHERE { hp:Defence_against_the_dark_arts hp:professor ?professor . FILTER (CONTAINS(str(?professor), 'Hogwarts_school_of_witchcraft_and_wizardry'))}"
+    },
+    {
+        "question": "Who has owned the Elder Wand?",
+        "SPQRQL": "SELECT ?owners WHERE { hp:Elder_wand hp:owners ?owners .}"
+    },
+    {
+        "question": "What are the intentions of Dumbledore's Army?",
+        "SPQRQL": "SELECT ?intentions WHERE { hp:Dumbledores_army hp:intentions ?intentions .}"
+    },
+    {
+        "question": "Who are the enemies of the Wizengamot?",
+        "SPQRQL": "SELECT ?enemies WHERE { hp:Wizengamot hp:enemies ?enemies .}"
+    },
+    {
+        "question": "What is the affiliation of the Phoenix?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:Phoenix hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "Who is the Supreme Mugwump and leader of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:International_confederation_of_wizards hp:leader ?leader . FILTER (CONTAINS(str(?leader), 'Supreme_mugwump'))}"
+    },
+    {
+        "question": "Who is the head boy or girl of the prefects?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Prefect hp:leader hp:Head_boy_or_girl ; hp:name ?leader .}"
+    },
+    {
+        "question": "Who owns Albus Dumbledore's wand?",
+        "SPQRQL": "SELECT ?owners WHERE { hp:Albus_dumbledores_wand hp:owners ?owners .}"
+    },
+    {
+        "question": "What is the name of the council that oversees magical laws in Great Britain?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Council_of_magical_law hp:name ?name .}"
+    },
+    {
+        "question": "Who is the owner of Hogwarts Castle?",
+        "SPQRQL": "SELECT ?owner WHERE { hp:Hogwarts_castle hp:owner ?owner .}"
+    },
+    {
+        "question": "What is the name of the location where the Mould-on-the-wold is situated?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Mould_on_the_wold hp:name ?name .}"
+    },
+    {
+        "question": "What are the locations affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Hogwarts_school_of_witchcraft_and_wizardry hp:location ?location .}"
+    },
+    {
+        "question": "Who are the residents of Mould-on-the-wold?",
+        "SPQRQL": "SELECT ?residents WHERE { hp:Mould_on_the_wold hp:residents ?residents .}"
+    },
+    {
+        "question": "Who are the subscribers to Transfiguration Today?",
+        "SPQRQL": "SELECT ?subscribers WHERE { hp:Transfiguration_today hp:subscribers ?subscribers .}"
+    },
+    {
+        "question": "Who are the owners of the Elder Wand?",
+        "SPQRQL": "SELECT ?owners WHERE { hp:Elder_wand hp:owners ?owners .}"
+    },
+    {
+        "question": "Who is the Supreme Mugwump of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:International_confederation_of_wizards hp:leader ?leader .}"
+    },
+    {
+        "question": "Who are the enemies of the Wizengamot?",
+        "SPQRQL": "SELECT ?enemies WHERE { hp:Wizengamot hp:enemies ?enemies .}"
+    },
+    {
+        "question": "Who are the founders of Dumbledore's Army?",
+        "SPQRQL": "SELECT ?founder WHERE { hp:Dumbledores_army hp:founder ?founder .}"
+    },
+    {
+        "question": "What are the names of the characters in the Harry Potter universe who are Half-Bloods?",
+        "SPQRQL": "SELECT ?character_name WHERE { ?character a hp:Individual_; hp:name ?character_name ; hp:blood hp:Half_blood .}"
+    },
+    {
+        "question": "What is the location of the Hogwarts Castle?",
+        "SPQRQL": "SELECT ?location_name WHERE { hp:Hogwarts_castle hp:location ?location ; hp:name ?location_name . FILTER (strstarts(str(?location), str(hp:Great_britain)))}"
+    },
+    {
+        "question": "Who are the members of Dumbledore's Army?",
+        "SPQRQL": "SELECT ?member_name WHERE { hp:Dumbledores_army hp:founder hp:Harry_potter ; hp:member ?member . ?member hp:name ?member_name .}"
+    },
+    {
+        "question": "Who is the owner of the Elder Wand?",
+        "SPQRQL": "SELECT ?owner_name WHERE { hp:Elder_wand hp:owners ?owner . ?owner hp:name ?owner_name .}"
+    },
+    {
+        "question": "What is the name of the organization that has Albus Dumbledore as its leader?",
+        "SPQRQL": "SELECT ?organization_name WHERE { ?organization hp:leader hp:Albus_dumbledore ; hp:name ?organization_name .}"
+    },
+    {
+        "question": "Which individuals in the Harry Potter universe are known to have owned the Elder Wand?",
+        "SPQRQL": "SELECT ?individual_name WHERE { hp:Elder_wand hp:owners ?owner . ?owner a hp:Individual_ ; hp:name ?individual_name .}"
+    },
+    {
+        "question": "Which organizations have Hogwarts School of Witchcraft and Wizardry as their affiliation?",
+        "SPQRQL": "SELECT ?organization_name WHERE { ?organization hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?organization_name .}"
+    },
+    {
+        "question": "What is the name of the location in England where the Dumbledore family lives?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Dumbledore_family hp:residents ?res . ?res hp:name ?name . FILTER(REGEX(?name, "Mould_on_the_wold", "i"))}"
+    },
+    {
+        "question": "What is the name of the individual who founded Dumbledore's Army?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Dumbledores_army hp:founder ?founder . ?founder hp:name ?name .}"
+    },
+    {
+        "question": "What is the name of the organization led by Albus Dumbledore that is an enemy of the British Ministry of Magic and has its headquarters at the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Wizengamot hp:leader hp:Albus_dumbledore ; hp:name ?name ; hp:enemies hp:Order_of_the_phoenix .}"
+    },
+    {
+        "question": "What is the name of the organization founded in 1997 with the intention of practicing Defence Against the Dark Arts, led by Harry Potter, and headquartered at Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Dumbledores_army hp:founder hp:Harry_potter ; hp:leader hp:Harry_potter ; hp:founded "1997"^^xsd:string ; hp:intentions hp:Defence_against_the_dark_arts ; hp:headquarters hp:Hogwarts_school_of_witchcraft_and_wizardry ; hp:name ?name .}"
+    },
+    {
+        "question": "Who are the owners of the Elder Wand?",
+        "SPQRQL": "SELECT ?owner_name WHERE { hp:Elder_wand hp:owners ?owner . ?owner hp:name ?owner_name .}"
+    },
+    {
+        "question": "What is the name of the Hogwarts castle owner?",
+        "SPQRQL": "SELECT ?ownerName WHERE { hp:Hogwarts_castle hp:owner ?owner . ?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "Who is the leader of the Wizengamot?",
+        "SPQRQL": "SELECT ?leaderName WHERE { hp:Wizengamot hp:leader ?leader . ?leader hp:name ?leaderName .}"
+    },
+    {
+        "question": "What is the location of the Astronomy Tower?",
+        "SPQRQL": "SELECT ?locationName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "Who are the owners of the Elder wand?",
+        "SPQRQL": "SELECT ?ownerName WHERE { hp:Elder_wand hp:owners ?owner . ?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "Which individuals are loyal to Albus Dumbledore?",
+        "SPQRQL": "SELECT ?individualName WHERE { ?individual hp:loyalty hp:Albus_dumbledore . ?individual hp:name ?individualName .}"
+    },
+    {
+        "question": "What are the names of the individuals who have owned the Elder Wand?",
+        "SPQRQL": "SELECT ?name WHERE { ?wand hp:name 'Elder_wand' . ?wand hp:owners ?owner . ?owner hp:name ?name .}"
+    },
+    {
+        "question": "Who is the professor of Defence Against the Dark Arts?",
+        "SPQRQL": "SELECT ?professor WHERE { ?subject hp:name 'Defence_against_the_dark_arts' . ?subject hp:professor ?professor .}"
+    },
+    {
+        "question": "What is the affiliation of the Highlands location?",
+        "SPQRQL": "SELECT ?affiliation WHERE { ?location hp:name 'Highlands' . ?location hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "Who is the leader of the Wizengamot?",
+        "SPQRQL": "SELECT ?leader WHERE { ?subject hp:name 'Wizengamot' . ?subject hp:leader ?leader .}"
+    },
+    {
+        "question": "What is the distinction of the Phoenix?",
+        "SPQRQL": "SELECT ?distinction WHERE { ?subject hp:name 'Phoenix' . ?subject hp:distinction ?distinction .}"
+    },
+    {
+        "question": "What is the name of the location where the Council of Magical Law is located?",
+        "SPQRQL": "SELECT ?name WHERE { ?subject hp:name 'Council_of_magical_law' . ?subject hp:location ?location . ?location hp:name ?name .}"
+    },
+    {
+        "question": "What is the affiliation of the Prefect?",
+        "SPQRQL": "SELECT ?affiliation WHERE { ?subject hp:name 'Prefect' . ?subject hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "Who are the residents of Mould on the Wold?",
+        "SPQRQL": "SELECT ?resident WHERE { ?location hp:name 'Mould_on_the_wold' . ?location hp:residents ?resident .}"
+    },
+    {
+        "question": "Who is the enemy of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemy WHERE { ?subject hp:name 'International_confederation_of_wizards' . ?subject hp:enemies ?enemy .}"
+    },
+    {
+        "question": "What is the style of the Headmaster?",
+        "SPQRQL": "SELECT ?style WHERE { ?subject hp:name 'Headmaster' . ?subject hp:style ?style .}"
+    },
+    {
+        "question": "What is the name of the location where the British Ministry of Magic is headquartered?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Wizengamot hp:name ?name ; hp:headquarters hp:British_ministry_of_magic .}"
+    },
+    {
+        "question": "Who is the owner of Hogwarts Castle?",
+        "SPQRQL": "SELECT ?owner WHERE { hp:Hogwarts_castle hp:name 'Hogwarts_castle' ; hp:owner ?owner .}"
+    },
+    {
+        "question": "Which individuals are owners of the Elder Wand?",
+        "SPQRQL": "SELECT ?owner WHERE { ?w hp:name 'Elder_wand' ; hp:owners ?owner .}"
+    },
+    {
+        "question": "What is the name of the organization founded in 1997 with the intention of learning Defence Against the Dark Arts?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Dumbledores_army hp:name ?name ; hp:founded hp:1997 ; hp:intentions hp:Defence_against_the_dark_arts .}"
+    },
+    {
+        "question": "Who is the professor of Defence Against the Dark Arts in Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?professor WHERE { hp:Defence_against_the_dark_arts hp:name 'Defence_against_the_dark_arts' ; hp:professor ?professor .}"
+    },
+    {
+        "question": "What is the name of the location where Dumbledore's Army is headquartered?",
+        "SPQRQL": "SELECT ?locationName WHERE { hp:Dumbledores_army hp:headquarters ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "Who is the owner of Hogwarts Castle?",
+        "SPQRQL": "SELECT ?ownerName WHERE { hp:Hogwarts_castle hp:owner ?owner . ?owner hp:name ?ownerName .}"
+    },
+    {
+        "question": "Who are the enemies of the Wizengamot?",
+        "SPQRQL": "SELECT ?enemyName WHERE { hp:Wizengamot hp:enemies ?enemy . ?enemy hp:name ?enemyName .}"
+    },
+    {
+        "question": "What is the location of the Astronomy Tower?",
+        "SPQRQL": "SELECT ?locationName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?locationName .}"
+    },
+    {
+        "question": "Who is the leader of the Council of Magical Law?",
+        "SPQRQL": "SELECT ?leaderName WHERE { hp:Council_of_magical_law hp:leader ?leader . ?leader hp:name ?leaderName .}"
+    },
+    {
+        "question": "What is the name of the Hogwarts location in Scotland that is affiliated with Hogwarts School of Witchcraft and Wizardry?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Hogwarts_castle hp:location hp:Scotland ; hp:name ?name ; hp:affiliation hp:Hogwarts_school_of_witchcraft_and_wizardry .}"
+    },
+    {
+        "question": "Who is the owner of Hogwarts Castle and what is its affiliation?",
+        "SPQRQL": "SELECT ?owner ?affiliation WHERE { hp:Hogwarts_castle hp:name 'Hogwarts_castle' ; hp:owner ?owner ;hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "What are the enemies of the Wizengamot and who is its leader?",
+        "SPQRQL": "SELECT ?enemies ?leader WHERE { hp:Wizengamot hp:name 'Wizengamot' ; hp:enemies ?enemies ; hp:leader ?leader .}"
+    },
+    {
+        "question": "Who is the founder and leader of Dumbledore's Army, and what are its intentions?",
+        "SPQRQL": "SELECT ?founder ?leader ?intentions WHERE { hp:Dumbledores_army hp:name 'Dumbledores_army' ; hp:founder ?founder ; hp:leader ?leader ; hp:intentions ?intentions .}"
+    },
+    {
+        "question": "Who are the romantic partners of Gellert Grindelwald and what kind of wand does he have?",
+        "SPQRQL": "SELECT ?romances ?wand WHERE { hp:Gellert_grindelwald hp:name 'Gellert_grindelwald' ; hp:romances ?romances ; hp:wand ?wand . FILTER(?wand = hp:Elder_wand)}"
+    },
+    {
+        "question": "Who are the residents of Mould on the Wold?",
+        "SPQRQL": "SELECT ?residents WHERE { hp:Mould_on_the_wold hp:residents ?residents .}"
+    },
+    {
+        "question": "Who is the leader of the Wizengamot?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Wizengamot hp:leader ?leader .}"
+    },
+    {
+        "question": "What is the affiliation of the Phoenix?",
+        "SPQRQL": "SELECT ?affiliation WHERE { hp:Phoenix hp:affiliation ?affiliation .}"
+    },
+    {
+        "question": "Who is the founder of Dumbledore's Army?",
+        "SPQRQL": "SELECT ?founder WHERE { hp:Dumbledores_army hp:founder ?founder .}"
+    },
+    {
+        "question": "Who has owned the Elder Wand?",
+        "SPQRQL": "SELECT ?owners WHERE { hp:Elder_wand hp:owners ?owners .}"
+    },
+    {
+        "question": "Who is the professor of Defence Against the Dark Arts?",
+        "SPQRQL": "SELECT ?professor WHERE { hp:Defence_against_the_dark_arts hp:professor ?professor .}"
+    },
+    {
+        "question": "What is the location of the Astronomy Tower?",
+        "SPQRQL": "SELECT ?location WHERE { hp:Astronomy_tower hp:location ?location .}"
+    },
+    {
+        "question": "Who is the head boy or girl of the Prefects?",
+        "SPQRQL": "SELECT ?leader WHERE { hp:Prefect hp:leader hp:Head_boy_or_girl ; hp:name ?leader .}"
+    },
+    {
+        "question": "What is the name of the newspaper subscribed to by Albus Dumbledore?",
+        "SPQRQL": "SELECT ?name WHERE { hp:Transfiguration_today hp:name ?name ; hp:subscribers hp:Albus_dumbledore .}"
+    },
+    {
+        "question": "Who are the enemies of the International Confederation of Wizards?",
+        "SPQRQL": "SELECT ?enemies WHERE { hp:International_confederation_of_wizards hp:enemies ?enemies .}"
+    },
+    {
+        "question": "What is the name of the school where the Astronomy tower is located?",
+        "SPQRQL": "SELECT ?schoolName WHERE { hp:Astronomy_tower hp:location ?location . ?location hp:name ?schoolName . FILTER(CONTAINS(str(?location), 'Hogwarts'))}"
+    },
+    {
+        "question": "What is the name of the council that belongs to the British Ministry of Magic?",
+        "SPQRQL": "SELECT ?councilName WHERE { hp:Council_of_magical_law hp:affiliation hp:British_ministry_of_magic .hp:Council_of_magical_law hp:name ?councilName .}" 
+
+    },
+    {
+        "question": "Who is the headmaster and what is their style?",
+        "SPQRQL": "SELECT ?headmasterName ?headmasterStyle WHERE { ?person hp:seat hp:Hogwarts_castle . ?person hp:style ?headmasterStyle . ?person hp:name ?headmasterName . FILTER(CONTAINS(str(?person), 'Headmaster'))} "
+    },
+    {
+        "question": "Which place in Great Britain is the location of Mould on the Wold?",
+        "SPQRQL": "SELECT ?placeName WHERE { hp:Mould_on_the_wold hp:location ?location . ?location hp:name ?placeName . FILTER(CONTAINS(str(?location), 'Great_britain'))}"
+    },
+    {
+        "question": "Who are the residents of Mould on the Wold?",
+        "SPQRQL": "SELECT ?residentName WHERE { hp:Mould_on_the_wold hp:residents ?resident . ?resident hp:name ?residentName .}"
+    },
+    {
+        "question": "Who is the leader of the Wizengamot and where is their headquarters located?",
+        "SPQRQL": "SELECT ?leaderName ?headquartersName WHERE { hp:Wizengamot hp:leader ?leader . ?leader hp:name ?leaderName . hp:Wizengamot hp:headquarters ?headquarters . ?headquarters hp:name ?headquartersName .}"
+    },
+    {
+        "question": "Who are the subscribers of Transfiguration Today?",
+        "SPQRQL": "SELECT ?subscriberName WHERE { hp:Transfiguration_today hp:subscribers ?subscriber . ?subscriber hp:name ?subscriberName .}"
+    },
+    {
+        "question": "What is the name of the wand that belonged to Albus Dumbledore?",
+        "SPQRQL": "SELECT ?wandName WHERE { hp:Albus_dumbledores_wand hp:name ?wandName .}"
+    }
+    
+]
